@@ -1,0 +1,56 @@
+body{
+	background-color: white;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+    width:1300px;
+
+
+}
+
+#entete
+{
+	margin-top: 20px;
+	 margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width:100%;
+
+    }
+
+div#formulaire{
+	border-width:2px;
+    border-style:solid;
+    border-color:black;
+	text-align: center;
+	margin-left: 300px;
+	margin-right: 100px;
+    margin-top : 25px;
+    width:700px;
+    margin-bottom: 20px;
+
+}
+
+div#formulaire input {
+	margin-right: 150px;
+	margin-left: 150px;
+	width:400px;
+	margin-bottom: 20px;
+
+}
+
+#footer { font-size: .90em;
+  width: 100%;
+  background-color: #DCDCDC;
+
+ text-align: center;
+ }
+
+  #bande1{
+  background-color: grey;
+  height: 4px;
+  width: 100%;
+ }
+
+ #survol{margin-left : auto;
+  margin-right: auto;}
