@@ -1,135 +1,212 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>
-		
-	</title>
-</head>
-<body>
-	<div id="formulaire">
-		
-	
-	<form method="post" action="traitement.php">
-		<table>
-			<tr>
-				<td> </td>
-
-			</tr>
-			<tr>
-				<select  name="type" onChange="location.href=''+this.options[this.selectedIndex].value+'.html';">
-				<option> </option>
-
-				<option value="Administrateur"> Administrateur </option>
-				
-
-				<option value="Vendeur">Vendeur</option>
-				<option value="Acheteur">Acheteur</option>
-				</select>
-					
-					
-				
-			</tr>
-			
-
-			<tr>
-				<tr class="question">
-					<td > Pas de compte ?</td>
-				</tr> 
-				<tr>
-					<td> 
-						<a href="Connexion2.html">
-							<input type="button" name="créer" value="Créer votre compte Amazon">
-						</a>
-						</td>
-				</tr>
-				
-			</tr>
-
-		</table>
-	</form>
-	</div>
-
-</body>
-</html>-->
-
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link href="bootstrap.min.css" rel=stylesheet>
 	<link rel="stylesheet" href="Connexion.css">
+     
+    <!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<title>
 		Formulaire connexion
 	</title>
+    
+    <style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('img/fond1.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-color: black;
+width: 100%;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+
+
+.card{
+height: 200px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+       img {
+ display: block;
+ width: 150px;
+ height: 43px;
+}
+        
+  
+}
+        
+        .colorf { background-color: black;
+                  border-color: black;
+         }
+
+
+.colorc{
+    color: darkorange;
+        }
+
+.btn-black{background-color: black;
+        color: white;}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+ box-shadow: 1px 1px 12px black;
+   
+}
+    </style>
 </head>
-<body>
-	<!--<div class="container-fluid"><div class ="row">
-		<article class="col-md-12">-->
-	
-		
-	<div id="entete"> <img src="logoamazon3.png" alt="logo"></div>
-	<div id="formulaire">
-	<form method="post" action="traitement.php">
-<p style="color:#F79B34";> <B>Identifiez-vous</B> </p>		<table>
+    
+   <body>
 
-	<tr>
-				<td> </td>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Identifiez-vous</h3>
+				<div class="d-flex justify-content-end social_icon">
+                    <a href="index.html"><img src="img/logoamazon3.png" alt="logo"></a>
+					<span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span>
+					<span><i class="fab fa-youtube-square"></i></span>
+				</div>
+			</div>
+			<div class="card-body">
+				<form method="post" action="traitementVendeur.php">
+					 <div class="form-group">
+                         <select  class="form-control" name="type" onChange="location.href=''+this.options[this.selectedIndex].value+'.html';">
+				        <option> </option>
 
-			</tr>
-			<tr>
-				<select  name="type" onChange="location.href=''+this.options[this.selectedIndex].value+'.html';">
-				<option> </option>
-
-				<option value="Administrateur"> Administrateur </option>
-				
-
-				<option value="Vendeur">Vendeur</option>
-				<option value="Acheteur">Acheteur</option>
+				        <option value="Administrateur"> Administrateur </option>
+				        <option value="Vendeur">Vendeur</option>
+				        <option value="Acheteur">Acheteur</option>
 				</select>
-					
-					
-				
-			</tr>
-			<br><br>
+                    </div>
+				</form>
+			</div>
+            
+            			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Pas de compte ?<a href="Connexion2.html"> Inscrivez-vous</a>
+				</div>
 
-			<tr>
-				<tr class="question">
-					<td > Pas de compte ?</td>
-				</tr> 
-				<tr>
-					<td> 
-						<a href="Connexion2.html">
-							<input type="button" name="créer" value="Créer votre compte Amazon">
-						</a>
-						</td>
-				</tr>
-				
-			</tr>
-			
-					
-			<!--
-			<tr>
-				<td>
-					<input type="submit" name="valider" value="Valider"> <style>
-#survol:hover {color:#F79B34;}
-</style>
+			</div>
 
-<input id="survol" style=" border: 2px; cursor: pointer; text-decoration: underline;" type="submit" name="valider" value="Valider votre choix" />
-				</td>
-			</tr> -->
-
-			
-
-		</table>
-	</form>
-	<!--</div></article></div>-->
+		</div>
+	</div>
 </div>
-<br><br><br><br><br><br><br>
-<div id="bande1"></div>
- <div id="footer"><p style="color:#1E7FCB";>Droit d'auteur &copy; 2019 ECEamazon, 75015 Paris<br>Conditions générales de ventes</p>
- </div>
+    
+     <!-- Footer -->
+		<footer class="footer">
 
-</body>
+			<!-- container -->
+			<div class="container-fluid">
+
+                <div class="row">
+                <div class="col-sm-12 colorf col-padding">
+                    
+				    <button class="btn  btn-black btn-lg"><i class="fab fa-facebook"></i></button>
+                    <button class="btn btn-black btn-lg"><i class="fab fa-twitter"></i></button>
+                    <button class="btn btn-black btn-lg"><i class="fab fa-youtube"></i></button>
+                    
+
+					</div>
+                </div>
+				<!-- row -->
+				<div class="row ">
+
+					<!-- copyright -->
+					<div class="col-sm-12 colorf">
+						<span class="copyright">Droit d'auteur @2019 <a href="index.html/#Accueil">ECEamazon</a>, 75015 Paris | Conditions générales de ventes <br> <br> </span>
+					</div>
+					<!-- /copyright -->
+
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+    </body>
 </html>

@@ -47,6 +47,7 @@ if($Adresse1 == "") {$erreur .= " Le champ Adresse1 est vide. <br>";}
 if($Adresse2 == "") {$erreur .= " Le champ Adresse2 est vide. <br>";}
 if($Ville == "") {$erreur .= " Le champ Ville est vide. <br>";}
 if($Postal == "") {$erreur .= " Le champ Code Postal est vide. <br>";}
+
 if($Pays == "") {$erreur .= " Le champ Pays est vide. <br>";}
 if($Numero == "") {$erreur .= " Le champ Numero est vide. <br>";}
 if($TypePaiement == "") {$erreur .= " Le champ Type de Paiement est vide. <br>";}
@@ -55,6 +56,10 @@ if($NomCarte == "") {$erreur .= " Le champ Nom de Carte est vide. <br>";}
 if($DateExpiration == "") {$erreur .= " Le champ date Expiration est vide. <br>";}
 if($CodeSecurite== "") {$erreur .= " Le champ Code de Securite est vide. <br>";}
 		
+
+
+
+
 
  if ($erreur != "") {
  echo "Erreur : $erreur";
@@ -72,16 +77,26 @@ if ($db_found) {
 
 if($erreur=="")
 {
+	$sql ="SELECT * FROM acheteur WHERE Email='$mail'";
+	 $result = mysqli_query($db_handle, $sql);
+
+	 if(mysqli_num_rows($result) == 0)
+{
+
+
 	$sql = "INSERT INTO acheteur VALUES (0,'$identifiant','$password1','$nom','$Prenom','$Adresse','$mail','$Adresse1','$Adresse2','$Ville','$Postal','$Pays','$Numero','$TypePaiement','$NumeroCarte','$NomCarte','$DateExpiration','$CodeSecurite')";
 
  $result = mysqli_query($db_handle, $sql);
  echo "Compte acheteur Créer";
 }
 
-
+else{
+	echo "Email déjà utilisé";
+}
 
 }
 
+}
 
 else {
  echo "Database not found";

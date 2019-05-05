@@ -407,7 +407,7 @@ letter-spacing : 0.2em;
 
             <?php
 
-$database = "piscine2";
+$database = "piscine3";
 
 
 $db_handle = mysqli_connect('localhost', 'root', '');
@@ -415,12 +415,13 @@ $db_found = mysqli_select_db($db_handle, $database);
 
  //si le BDD existe, faire le traitement
 if ($db_found) {
- $sql = "SELECT Titre,Auteur,Image FROM Livre WHERE Date=2012 OR Date=2007 ";
+ $sql = "SELECT * FROM Livre WHERE Date=2012 OR Date=2007 ";
  $result = mysqli_query($db_handle, $sql);
  while ($data = mysqli_fetch_assoc($result)) {
- echo "Titre: " . $data['Titre'] . '<br>';
- echo "Auteur:" . $data['Auteur'] . '<br>';
- echo('<img class="image" src="' . $data['Image'] .'" / > <br/>');
+  echo "<b>TItre: </b>" . $data['TItre'] . '<br>';
+ echo "<b>Auteur: </b>" . $data['Auteur'] . '<br>';
+  echo "<b>Prix: </b>" . $data['Prix'] . '<br>';
+ echo('<img  src="' . $data['Image'] .'" / > <br/>');
  
  }//end while
 
@@ -439,7 +440,7 @@ mysqli_close($db_handle);
 
             <?php
 
-$database = "piscine2";
+$database = "piscine3";
 
 
 $db_handle = mysqli_connect('localhost', 'root', '');
@@ -447,11 +448,12 @@ $db_found = mysqli_select_db($db_handle, $database);
 
  //si le BDD existe, faire le traitement
 if ($db_found) {
- $sql = "SELECT Titre,Auteur,Image FROM Livre WHERE Date=2015 OR Date=2000 OR Date=2009 OR Date=2014 ";
+ $sql = "SELECT * FROM Livre WHERE Date=2015 OR Date=2000 OR Date=2009 OR Date=2014 ";
  $result = mysqli_query($db_handle, $sql);
  while ($data = mysqli_fetch_assoc($result)) {
- echo "Titre: " . $data['Titre'] . '<br>';
- echo "Auteur:" . $data['Auteur'] . '<br>';
+ echo "<b>TItre: </b>" . $data['TItre'] . '<br>';
+ echo "<b>Auteur: </b>" . $data['Auteur'] . '<br>';
+  echo "<b>Prix: </b>" . $data['Prix'] . '<br>';
  echo('<img  src="' . $data['Image'] .'" / > <br/>');
  
  }//end while
@@ -471,7 +473,7 @@ mysqli_close($db_handle);
 
             <?php
 
-$database = "piscine2";
+$database = "piscine3";
 
 
 $db_handle = mysqli_connect('localhost', 'root', '');
@@ -479,12 +481,14 @@ $db_found = mysqli_select_db($db_handle, $database);
 
  //si le BDD existe, faire le traitement
 if ($db_found) {
- $sql = "SELECT Titre,Auteur,Image FROM Livre WHERE Date=2011 OR Date=2018 ";
+ $sql = "SELECT * FROM Livre WHERE Date=2011 OR Date=2018 ";
  $result = mysqli_query($db_handle, $sql);
  while ($data = mysqli_fetch_assoc($result)) {
- echo "Titre: " . $data['Titre'] . '<br>';
- echo "Auteur:" . $data['Auteur'] . '<br>';
+ echo "<b>TItre: </b>" . $data['TItre'] . '<br>';
+ echo "<b>Auteur: </b>" . $data['Auteur'] . '<br>';
+  echo "<b>Prix: </b>" . $data['Prix'] . '<br>';
  echo('<img  src="' . $data['Image'] .'" / > <br/>');
+
  
  }//end while
 
@@ -503,7 +507,7 @@ mysqli_close($db_handle);
 
             <?php
 
-$database = "piscine2";
+$database = "piscine3";
 
 
 $db_handle = mysqli_connect('localhost', 'root', '');
@@ -511,11 +515,12 @@ $db_found = mysqli_select_db($db_handle, $database);
 
  //si le BDD existe, faire le traitement
 if ($db_found) {
- $sql = "SELECT Titre,Auteur,Image FROM Livre WHERE Date=2013 OR Date=2019 OR Date=2016 ";
+ $sql = "SELECT * FROM Livre WHERE Date=2013 OR Date=2019 OR Date=2016 ";
  $result = mysqli_query($db_handle, $sql);
  while ($data = mysqli_fetch_assoc($result)) {
- echo "Titre: " . $data['Titre'] . '<br>';
- echo "Auteur:" . $data['Auteur'] . '<br>';
+ echo "<b>TItre: </b>" . $data['TItre'] . '<br>';
+ echo "<b>Auteur: </b>" . $data['Auteur'] . '<br>';
+  echo "<b>Prix: </b>" . $data['Prix'] . '<br>';
  echo('<img  src="' . $data['Image'] .'" / > <br/>');
  
  }//end while

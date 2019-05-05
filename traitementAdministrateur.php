@@ -10,7 +10,7 @@
  $type = isset($_POST["type"])?$_POST["type"] : "";
  $identifiant = isset($_POST["identifiant"])?$_POST["identifiant"] : "";
  $password = isset($_POST["password"])?$_POST["password"] : "";
- $database = "piscine";
+ $database = "piscine3";
  $erreur="";
 
 
@@ -40,7 +40,7 @@ echo "Erreur de connexion";
  else {
  	echo "connexion réussie";
  	?>
- 	<a href="Administrateur.php"> <input type="button" name="button" value="Acceder a ma page"></a> 
+ 	<a href="administrateur.php"> <input type="button" name="button" value="Acceder a ma page"></a> 
  	<?php  
  	}
  }

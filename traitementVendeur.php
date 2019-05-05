@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		
-	</title>
-</head>
-<body>
+
 <?php
  $type = isset($_POST["type"])?$_POST["type"] : "";
  $identifiant = isset($_POST["identifiant"])?$_POST["identifiant"] : "";
- $password = isset($_POST["password"])?$_POST["password"] : "";
+ $Email = isset($_POST["Email"])?$_POST["Email"] : "";
  $database = "piscine3";
  $erreur="";
 
 
 
- 
 
 $db_handle = mysqli_connect('localhost', 'root', '');
 $db_found = mysqli_select_db($db_handle, $database);
@@ -24,23 +16,24 @@ $db_found = mysqli_select_db($db_handle, $database);
  //si le BDD existe, faire le traitement
 if ($db_found) {
 
- $sql = "SELECT * FROM acheteur";
+ $sql = "SELECT * FROM vendeur";
 if ($identifiant != "") {
-//on cherche le livre avec les paramètres titre et auteur
+
 $sql .= " WHERE identifiant='$identifiant'";
-if ($password != "") {
-$sql .= " AND password='$password'";
+if ($Email != "") {
+$sql .= " AND Email='$Email'";
 }
 }
 $result = mysqli_query($db_handle, $sql);
-if (mysqli_num_rows($result) == 0 OR  $identifiant=="" OR $password=="") {
-//le livre recherché n'existe pas
+if (mysqli_num_rows($result) == 0 OR  $identifiant=="" OR $Email=="") {
+
 echo "Erreur de connexion";
+
 }
  else {
  	echo "connexion réussie";
- 	?>
- 	<a href="acheteur.php"> <input type="button" name="button" value="Acceder a ma page"></a> 
+ 		?>
+ 	<a href="Vendeur.php"> <input type="button" name="button" value="Acceder a ma page"></a> 
  	<?php  
  	}
  }
@@ -59,7 +52,7 @@ mysqli_close($db_handle);
 ?>
 
 
-</body>
-</html>
+
+
 
 

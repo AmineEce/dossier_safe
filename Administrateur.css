@@ -38,16 +38,18 @@ div#formulaire input {
 	margin-bottom: 20px;
 
 }
-
-#footer { font-size: .90em;
+.footer {
+  left: 0;
+  bottom: 0;
   width: 100%;
-  background-color: #DCDCDC;
-
- text-align: center;
- }
+  background-color: black;
+  color: white;
+  text-align: center;
+   
+}
 
   #bande1{
   background-color: grey;
   height: 4px;
   width: 100%;
- }
+}
